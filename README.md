@@ -14,7 +14,7 @@ Download city as protobuf file (osm.pbf). For example, I got mine from here - ht
 
 Use OSM2PGSQL to create a Postgres/Postgis database - here, I called it "embra", the downloaded file was edingburgh.osm.pbf :-
 
-  cd <path to downloaded osm.pbf file>
+  cd /path/to/protobuf-file
   
   createdb embra 	
   
