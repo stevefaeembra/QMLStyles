@@ -1,7 +1,7 @@
 Prerequisites
 =============
 
-These qml files assume you're using POSTGRESQL/POSTGIS, and have access to the osm2pgsql tool.
+These qml files assume you're using PostgreSQL, POSTGIS, and have access to the osm2pgsql tool.
 
 * PostgreSQL
 * PostGIS
