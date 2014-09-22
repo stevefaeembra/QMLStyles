@@ -3,9 +3,9 @@ Prerequisites
 
 These qml files assume you're using POSTGRESQL/POSTGIS, and have access to the osm2pgsql tool.
 
-* POSTGRESQL
-* POSTGIS
-* OSM2PGSQL
+* PostgreSQL
+* PostGIS
+* osm2pgsql
 
 Prepare the database
 ====================
@@ -14,13 +14,10 @@ Download city as protobuf file (osm.pbf). For example, I got mine from here - ht
 
 Use OSM2PGSQL to create a Postgres/Postgis database - here, I called it "embra", the downloaded file was edingburgh.osm.pbf :-
 
-  cd /path/to/protobuf-file
-  
-  createdb embra 	
-  
-  psql -d embra -c 'CREATE EXTENSION postgis;'
-  
-  osm2pgsql --create --database embra edinburgh.osm.pbf
+* cd /path/to/protobuf-file
+* createdb embra 	
+* psql -d embra -c 'CREATE EXTENSION postgis;'
+* osm2pgsql --create --database embra edinburgh.osm.pbf
   
 
 In QGIS
