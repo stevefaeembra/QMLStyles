@@ -1,40 +1,37 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.4.0-Chugiak" minimumScale="0" maximumScale="100000" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.4.0-Chugiak" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
   <renderer-v2 symbollevels="0" type="RuleRenderer">
     <rules>
-      <rule symbol="0" label="default"/>
-      <rule filter="&quot;landuse&quot;  in ( 'grass' , 'garden', 'allotments' , 'park', 'cemetery', 'farm' , 'farmland' , 'farmyard' , 'field' , 'forest' , 'meadow', 'orchard' , 'plant_nursery' , 'recreation_ground' , 'tree nursery' , 'village_green'    ) or  &quot;leisure&quot; in ( 'common' , 'garden' , 'park' , 'pitch' , 'golf_course' , 'walled garden' ) or  &quot;natural&quot; in ( 'grassland', 'heath' , 'land' , 'wood'  )" symbol="1" label="grass"/>
-      <rule filter="&quot;leisure&quot; in (  'pitch' , 'golf_course'  ) " symbol="2" label="pitch"/>
-      <rule filter="&quot;landuse&quot;  in (  'forest'   )  or  &quot;natural&quot; in (  'wood'  )" symbol="3" label="dense grass"/>
-      <rule filter=" &quot;natural&quot;  =   'scrub' " symbol="4" label="scrub"/>
-      <rule filter=" &quot;building&quot;  IS NOT NULL or &quot;historic&quot; is not null or &quot;amenity&quot; is not null" symbol="5" label="building"/>
-      <rule filter="&quot;landuse&quot; in (  'brownfield'  , 'construction')" symbol="6" label="building construction"/>
-      <rule filter=" &quot;water&quot; is not NULL or  &quot;waterway&quot; is not null  or &quot;landuse&quot;  = 'pond' or  &quot;natural&quot; = 'water' " symbol="7" label="water"/>
-      <rule filter="&quot;natural&quot; = 'wetland' " symbol="8" label="wetland"/>
-      <rule filter=" &quot;highway&quot;  in ( 'footway' , 'path' , 'pedestrian' , 'residential', 'unclassified' )" symbol="9" label="pedestrian"/>
+      <rule filter=" &quot;building&quot;  IS NOT NULL" symbol="0" label="building"/>
+      <rule filter=" &quot;natural&quot; =  'water'  or  &quot;water&quot; is not null or  &quot;waterway&quot; is not null" symbol="1" label="water"/>
+      <rule filter=" &quot;landuse&quot;  IN ( 'allotments', 'cemetery',  'common' , 'Community Garden',  'grass' , 'garden' , 'greenfield' , 'land' , 'orchard' , 'park' )" symbol="2" label="landuse greenspace"/>
+      <rule filter="  &quot;leisure&quot; in  ('golf_course',  'golf_range',  'maze',  'miniature_golf',  'park',  'pitch',  'playground',  'playing_field',  'garden', 'pitch_and_putt' , 'recreation_ground' , 'water_park' ) or  &quot;landuse&quot; in ( 'leisure',  'recreation_ground', 'Rugby Pitch', 'school'   )" symbol="3" label="leisure greenspace"/>
+      <rule filter="wood is not null or &quot;natural&quot; in ('wood','heath','scrub') or &quot;landuse&quot; = 'allotments'" symbol="4" label="wood"/>
+      <rule filter=" &quot;construction&quot; is not null or  &quot;landuse&quot; = 'brownfield' " symbol="5" label="brownfield"/>
+      <rule label="default"/>
     </rules>
     <symbols>
       <symbol alpha="1" type="fill" name="0">
-        <layer pass="1" class="SimpleFill" locked="0">
+        <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
           <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="0,0,0,255"/>
-          <prop k="color_border" v="175,179,138,255"/>
+          <prop k="color" v="165,191,221,255"/>
+          <prop k="color_border" v="165,191,221,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="0,0"/>
           <prop k="offset_unit" v="MM"/>
-          <prop k="style" v="no"/>
+          <prop k="style" v="solid"/>
           <prop k="style_border" v="solid"/>
           <prop k="width_border" v="0.26"/>
         </layer>
       </symbol>
       <symbol alpha="1" type="fill" name="1">
-        <layer pass="2" class="SimpleFill" locked="0">
+        <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
           <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="67,79,37,255"/>
-          <prop k="color_border" v="67,79,37,255"/>
+          <prop k="color" v="62,72,83,255"/>
+          <prop k="color_border" v="90,104,120,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="0,0"/>
@@ -45,11 +42,11 @@
         </layer>
       </symbol>
       <symbol alpha="1" type="fill" name="2">
-        <layer pass="2" class="SimpleFill" locked="0">
+        <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
           <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="85,99,45,255"/>
-          <prop k="color_border" v="85,99,45,255"/>
+          <prop k="color" v="220,220,0,255"/>
+          <prop k="color_border" v="220,220,0,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="0,0"/>
@@ -60,11 +57,11 @@
         </layer>
       </symbol>
       <symbol alpha="1" type="fill" name="3">
-        <layer pass="4" class="SimpleFill" locked="0">
+        <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
           <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="33,39,18,255"/>
-          <prop k="color_border" v="33,39,18,255"/>
+          <prop k="color" v="220,220,0,255"/>
+          <prop k="color_border" v="220,220,0,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="0,0"/>
@@ -75,11 +72,11 @@
         </layer>
       </symbol>
       <symbol alpha="1" type="fill" name="4">
-        <layer pass="3" class="SimpleFill" locked="0">
+        <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
           <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="47,56,26,255"/>
-          <prop k="color_border" v="47,56,26,255"/>
+          <prop k="color" v="175,175,0,255"/>
+          <prop k="color_border" v="175,175,0,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="0,0"/>
@@ -89,147 +86,12 @@
           <prop k="width_border" v="0.26"/>
         </layer>
       </symbol>
-      <symbol alpha="0.682353" type="fill" name="5">
-        <layer pass="0" class="ShapeburstFill" locked="0">
-          <prop k="blur_radius" v="0"/>
-          <prop k="color1" v="0,0,255,255"/>
-          <prop k="color2" v="0,255,0,255"/>
-          <prop k="color_type" v="0"/>
-          <prop k="discrete" v="0"/>
-          <prop k="distance_map_unit_scale" v="0,0"/>
-          <prop k="distance_unit" v="MM"/>
-          <prop k="ignore_rings" v="0"/>
-          <prop k="max_distance" v="1"/>
-          <prop k="offset" v="0,0"/>
-          <prop k="offset_map_unit_scale" v="0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="shapeburst_color" v="143,126,101,255"/>
-          <prop k="shapeburst_color2" v="143,126,101,255"/>
-          <prop k="use_whole_shape" v="0"/>
-        </layer>
-      </symbol>
-      <symbol alpha="0.682353" type="fill" name="6">
+      <symbol alpha="1" type="fill" name="5">
         <layer pass="0" class="SimpleFill" locked="0">
           <prop k="border_width_map_unit_scale" v="0,0"/>
           <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="143,126,101,255"/>
-          <prop k="color_border" v="143,126,101,255"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="offset" v="0,0"/>
-          <prop k="offset_map_unit_scale" v="0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="style" v="solid"/>
-          <prop k="style_border" v="no"/>
-          <prop k="width_border" v="0.26"/>
-        </layer>
-        <layer pass="0" class="LinePatternFill" locked="0">
-          <prop k="color" v="0,0,0,255"/>
-          <prop k="distance" v="1"/>
-          <prop k="distance_map_unit_scale" v="0,0"/>
-          <prop k="distance_unit" v="MM"/>
-          <prop k="line_width_map_unit_scale" v="0,0"/>
-          <prop k="line_width_unit" v="MM"/>
-          <prop k="lineangle" v="45"/>
-          <prop k="linewidth" v="0.5"/>
-          <prop k="offset" v="0"/>
-          <prop k="offset_map_unit_scale" v="0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="outline_width_map_unit_scale" v="0,0"/>
-          <prop k="outline_width_unit" v="MM"/>
-          <symbol alpha="1" type="line" name="@6@1">
-            <layer pass="0" class="SimpleLine" locked="0">
-              <prop k="capstyle" v="square"/>
-              <prop k="color" v="0,0,0,255"/>
-              <prop k="customdash" v="5;2"/>
-              <prop k="customdash_map_unit_scale" v="0,0"/>
-              <prop k="customdash_unit" v="MM"/>
-              <prop k="draw_inside_polygon" v="0"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0"/>
-              <prop k="offset_map_unit_scale" v="0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="penstyle" v="solid"/>
-              <prop k="use_custom_dash" v="0"/>
-              <prop k="width" v="0.5"/>
-              <prop k="width_map_unit_scale" v="0,0"/>
-              <prop k="width_unit" v="MM"/>
-            </layer>
-          </symbol>
-        </layer>
-      </symbol>
-      <symbol alpha="1" type="fill" name="7">
-        <layer pass="0" class="SimpleFill" locked="0">
-          <prop k="border_width_map_unit_scale" v="0,0"/>
-          <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="89,130,176,255"/>
-          <prop k="color_border" v="46,67,91,255"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="offset" v="0,0"/>
-          <prop k="offset_map_unit_scale" v="0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="style" v="solid"/>
-          <prop k="style_border" v="solid"/>
-          <prop k="width_border" v="0.26"/>
-        </layer>
-      </symbol>
-      <symbol alpha="1" type="fill" name="8">
-        <layer pass="0" class="SimpleFill" locked="0">
-          <prop k="border_width_map_unit_scale" v="0,0"/>
-          <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="89,130,176,255"/>
-          <prop k="color_border" v="89,130,176,255"/>
-          <prop k="joinstyle" v="bevel"/>
-          <prop k="offset" v="0,0"/>
-          <prop k="offset_map_unit_scale" v="0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="style" v="solid"/>
-          <prop k="style_border" v="solid"/>
-          <prop k="width_border" v="0.26"/>
-        </layer>
-        <layer pass="0" class="PointPatternFill" locked="0">
-          <prop k="displacement_x" v="0"/>
-          <prop k="displacement_x_map_unit_scale" v="0,0"/>
-          <prop k="displacement_x_unit" v="MM"/>
-          <prop k="displacement_y" v="1"/>
-          <prop k="displacement_y_map_unit_scale" v="0,0"/>
-          <prop k="displacement_y_unit" v="MM"/>
-          <prop k="distance_x" v="1"/>
-          <prop k="distance_x_map_unit_scale" v="0,0"/>
-          <prop k="distance_x_unit" v="MM"/>
-          <prop k="distance_y" v="1"/>
-          <prop k="distance_y_map_unit_scale" v="0,0"/>
-          <prop k="distance_y_unit" v="MM"/>
-          <prop k="outline_width_map_unit_scale" v="0,0"/>
-          <prop k="outline_width_unit" v="MM"/>
-          <symbol alpha="1" type="marker" name="@8@1">
-            <layer pass="0" class="SimpleMarker" locked="0">
-              <prop k="angle" v="0"/>
-              <prop k="color" v="255,255,255,255"/>
-              <prop k="color_border" v="0,0,0,0"/>
-              <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="name" v="circle"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_style" v="no"/>
-              <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="0,0"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="scale_method" v="area"/>
-              <prop k="size" v="0.6"/>
-              <prop k="size_map_unit_scale" v="0,0"/>
-              <prop k="size_unit" v="MM"/>
-              <prop k="vertical_anchor_point" v="1"/>
-            </layer>
-          </symbol>
-        </layer>
-      </symbol>
-      <symbol alpha="1" type="fill" name="9">
-        <layer pass="0" class="SimpleFill" locked="0">
-          <prop k="border_width_map_unit_scale" v="0,0"/>
-          <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="131,116,93,255"/>
-          <prop k="color_border" v="131,116,93,255"/>
+          <prop k="color" v="152,76,0,255"/>
+          <prop k="color_border" v="128,152,72,255"/>
           <prop k="joinstyle" v="bevel"/>
           <prop k="offset" v="0,0"/>
           <prop k="offset_map_unit_scale" v="0,0"/>
@@ -482,7 +344,7 @@
   <editform></editform>
   <editforminit></editforminit>
   <featformsuppress>0</featformsuppress>
-  <annotationform>.</annotationform>
+  <annotationform></annotationform>
   <editorlayout>generatedlayout</editorlayout>
   <excludeAttributesWMS/>
   <excludeAttributesWFS/>
