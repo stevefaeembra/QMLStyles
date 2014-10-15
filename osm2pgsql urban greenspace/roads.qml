@@ -1,12 +1,13 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.4.0-Chugiak" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.4.0-Chugiak" minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" simplifyMaxScale="1" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
   <renderer-v2 symbollevels="0" type="RuleRenderer">
     <rules>
-      <rule filter="&quot;highway&quot; in ('primary','secondary','tertiary','residential','unclassified')" symbol="0" label="road"/>
-      <rule filter="&quot;highway&quot; in ('footpath','path','track','steps')" symbol="1" label="path"/>
+      <rule filter="&quot;highway&quot; in ('primary','secondary','tertiary','residential','unclassified','trunk')" symbol="0" label="road"/>
+      <rule filter="&quot;highway&quot; in ('footpath','footway','path','track','steps','unsufraced','unclassified')" symbol="1" label="path"/>
       <rule filter=" &quot;railway&quot;  =  'rail' and  &quot;z_order&quot; >= 0" symbol="2" label="railway"/>
       <rule filter=" &quot;railway&quot;  =  'rail' and  &quot;z_order&quot; &lt; 0" symbol="3" label="railway (tunnel)"/>
       <rule filter=" &quot;railway&quot;  =  'subway'" symbol="4" label="railway (tunnel)"/>
+      <rule label="other"/>
     </rules>
     <symbols>
       <symbol alpha="1" type="line" name="0">
